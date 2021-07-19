@@ -126,7 +126,6 @@ show_first_run_summary() {
   echo -en "\e[38;5;208m" &&
   echo -e "$(cat .gp/snippets/messages/phpmyadmin-security.txt)" &&
   echo -e "\e[0m"
-  show_powered_by
   echo -e "\e\n[38;5;171mALL DONE 🚀\e[0m"
   echo -e "\n\e[38;5;194mIf everything looks good in the summary above then push any new\nproject files to your git repository. Happy coding 👩‍💻👨‍💻\e[0m"
 }
@@ -142,26 +141,6 @@ show_powered_by() {
   echo "This project is powered by:"
   echo -en "\e[38;5;34m"
   gls_version
-  echo -e "$(php artisan --version)"
-  composer show | grep laravel/ui >/dev/null && ui=1 || ui=0
-  if [[ $ui -eq 1 ]]; then
-    [[ $(grep laravel/ui/tree/ composer.lock) =~ $ver_pattern ]] && echo "laravel/ui ${BASH_REMATCH[1]}"
-  fi
-  file=node_modules/react/cjs/react.development.js
-  if [[ -e $file ]]; then
-    [[ $(head -n 1 "$file") =~ $ver_pattern ]] && echo "react ${BASH_REMATCH[1]}"
-  fi
-  file=node_modules/react-dom/cjs/react-dom.development.js
-  if [[ -e $file ]]; then
-    [[ $(head -n 1 "$file") =~ $ver_pattern ]] && echo "react-dom ${BASH_REMATCH[1]}"
-  fi
-  file=node_modules/vue/dist/vue.js
-  alt_file=node_modules/@vue/shared/package.json
-  if [[ -e $file ]]; then
-    [[ $(head -n 2 "$file") =~ $ver_pattern ]] && echo "vue ${BASH_REMATCH[1]}"
-  elif [[ -e "$alt_file" ]]; then
-    [[ $(grep version "$alt_file" | head -1) =~ $ver_pattern ]] && echo "vue ${BASH_REMATCH[1]}"
-  fi
   echo -en "\e[0m"
 }
 
