@@ -1,7 +1,7 @@
 # Welcome
 
 🚀
-`gitpod-laravel-starter` was built from [`gitpod-laravel-starter` v1.3.0](https://github.com/apolopena/gitpod-laravel-starter) and generates a starting point for you to [develop in the cloud](https://www.gitpod.io/) with [phpmyadmin](https://www.phpmyadmin.net/) , [MySql](https://www.mysql.com/products/community/) and pretty much any other technoglogy you would like to add.
+`gitpod-phpmyadmin` was built from [`gitpod-laravel-starter` v1.3.0](https://github.com/apolopena/gitpod-laravel-starter) and generates a starting point for you to [develop in the cloud](https://www.gitpod.io/) with [phpmyadmin](https://www.phpmyadmin.net/) , [MySql](https://www.mysql.com/products/community/) and pretty much any other technoglogy you would like to add.
 * Develop in the cloud on the [Gitpod](https://www.gitpod.io/) platform
 * Preconfigured yet fully customizable [LAMP](https://en.wikipedia.org/wiki/LAMP_(software_bundle)) or [LEMP](https://lemp.io/) stack
 * Full debugging capabilities
