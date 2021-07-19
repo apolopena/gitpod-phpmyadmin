@@ -38,8 +38,9 @@ if [[ $update_npm == 1 ]]; then
 fi
 # END: Update npm if needed
 
-# BEGIN: init: rsync any new project files from the docker image to the repository
+# BEGIN: init tasks
 if [[ $(bash .gp/bash/helpers.sh is_inited) == 0 ]]; then
+  # rsync any new project files from the docker image to the repository
   msg="rsync $(php ~/project-starter/artisan --version) from ~/project-starter to $GITPOD_REPO_ROOT"
   log_silent "$msg" && start_spinner "$msg"
   shopt -s dotglob
@@ -54,4 +55,4 @@ if [[ $(bash .gp/bash/helpers.sh is_inited) == 0 ]]; then
     log_silent "SUCCESS: $msg"
   fi
 fi
-# END: init: rsync any new Laravel project files from the docker image to the repository
+# END: init tasks
