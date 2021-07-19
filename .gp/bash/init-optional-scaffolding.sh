@@ -15,6 +15,7 @@
 
 parse="bash .gp/bash/utils.sh parse_ini_value starter.ini"
 
+install_phpmyadmin=$(eval "$parse" phpmyadmin install)
 init_phpmyadmin=".gp/bash/init-phpmyadmin.sh"
 
 if [[ $(bash .gp/bash/helpers.sh is_inited) == 0 ]]; then
