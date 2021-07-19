@@ -41,7 +41,7 @@ fi
 # BEGIN: init tasks
 if [[ $(bash .gp/bash/helpers.sh is_inited) == 0 ]]; then
   # rsync any new project files from the docker image to the repository
-  msg="rsync $(php ~/project-starter/artisan --version) from ~/project-starter to $GITPOD_REPO_ROOT"
+  msg="rsync from ~/project-starter to $GITPOD_REPO_ROOT"
   log_silent "$msg" && start_spinner "$msg"
   shopt -s dotglob
   grc -c .gp/conf/grc/rsync-stats.conf \
