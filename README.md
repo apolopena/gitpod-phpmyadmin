@@ -1,24 +1,22 @@
 # Welcome
 
 🚀
-`gitpod-laravel-starter` generates a starting point for you to [develop in the cloud](https://www.gitpod.io/) with [Laravel](https://laravel.com/) web application framework, [MySql](https://www.mysql.com/products/community/) and pretty much any other technoglogy you would like to add.
-* Supports Laravel 6, 7, and 8
+`gitpod-laravel-starter` was built from [`gitpod-laravel-starter` v1.3.0](https://github.com/apolopena/gitpod-laravel-starter) and generates a starting point for you to [develop in the cloud](https://www.gitpod.io/) with [phpmyadmin](https://www.phpmyadmin.net/) , [MySql](https://www.mysql.com/products/community/) and pretty much any other technoglogy you would like to add.
 * Develop in the cloud on the [Gitpod](https://www.gitpod.io/) platform
 * Preconfigured yet fully customizable [LAMP](https://en.wikipedia.org/wiki/LAMP_(software_bundle)) or [LEMP](https://lemp.io/) stack
 * Full debugging capabilities
-* Preset frontends for [React](https://reactjs.org/), [Vue](https://vuejs.org/), and [Bootstrap](https://getbootstrap.com/).
-* Auth scaffolding can be included with any preset frontend
+
+This readme is a work in progress and an adaptation from [`gitpod-laravel-starter` v1.3.0](https://github.com/apolopena/gitpod-laravel-starter)  so ignore references to the laravel framework as this functionality has been removed. Some of the information found that perrtains to laravel will pertain to this project as well.
 
 If you want to jump right in to [setting up a project](https://github.com/apolopena/gitpod-laravel-starter/wiki/Setup) then have a look at the wiki [setup page](https://github.com/apolopena/gitpod-laravel-starter/wiki/Setup).
 
 The [wiki](https://github.com/apolopena/gitpod-laravel-starter/wiki/Setup) is designed to provide you with essential details not found in this document such as how to easily add [hot reloading](https://github.com/apolopena/gitpod-laravel-starter/wiki/Hot-Reload) and [Typescript](https://github.com/apolopena/gitpod-laravel-starter/wiki/Typescript) to your projects. 
 
-`gitpod-laravel-starter` is designed for any type of developer from beginner to professional to hobbyist. Developing in the cloud has many benefits including giving developers the freedom to try entire complex technological stacks with a single click.
+`gitpod-phpmyadmin` is designed for any type of developer from beginner to professional to hobbyist. Developing in the cloud has many benefits including giving developers the freedom to try entire complex technological stacks with a single click.
 
 ## _Powered 100% by open source_:
 <a href="https://www.gitpod.io/"><img src="https://gitpod.io/static/media/gitpod.2cdd910d.svg" alt="Gitpod - Spin up fresh, automated dev environments
 for each task, in the cloud, in seconds" width="70" ></a>**Gitpod**
- <a href="https://laravel.com/"><img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Laravel.svg" alt="Laravel - The PHP Framework for Web Artisans" width="65" ><img src="https://laravel.com/img/logotype.min.svg" width="100"></a>
  <a href="https://www.php.net/"><img src="https://www.php.net/images/logos/new-php-logo.svg" alt="PHP - A popular general-purpose scripting language that is especially suited to web development" width="130" ></a>
 
 <a href="https://www.mysql.com/products/community/"><img src="https://www.logo.wine/a/logo/MySQL/MySQL-Logo.wine.svg" alt="MySQL Community Edition - Freely downloadable version of the world's most popular open source database" width="140" ></a>
