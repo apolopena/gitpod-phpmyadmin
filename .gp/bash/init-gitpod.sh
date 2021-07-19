@@ -38,6 +38,20 @@ if [[ $update_npm == 1 ]]; then
 fi
 # END: Update npm if needed
 
-# BEGIN: Bootstrapping
-# Laravel bootstrapping have been intentionally removed
-# END: Bootstrapping
+# BEGIN: init: rsync any new project files from the docker image to the repository
+if [[ $(bash .gp/bash/helpers.sh is_inited) == 0 ]]; then
+  msg="rsync $(php ~/project-starter/artisan --version) from ~/project-starter to $GITPOD_REPO_ROOT"
+  log_silent "$msg" && start_spinner "$msg"
+  shopt -s dotglob
+  grc -c .gp/conf/grc/rsync-stats.conf \
+  rsync -rlptgoD --ignore-existing --stats --human-readable /home/gitpod/project-starter/ "$GITPOD_REPO_ROOT"
+  err_code=$?
+  if [ $err_code != 0 ]; then
+    stop_spinner $err_code
+    log -e "ERROR: $msg"
+  else
+    stop_spinner $err_code
+    log_silent "SUCCESS: $msg"
+  fi
+fi
+# END: init: rsync any new Laravel project files from the docker image to the repository
