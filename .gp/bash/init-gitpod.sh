@@ -54,5 +54,14 @@ if [[ $(bash .gp/bash/helpers.sh is_inited) == 0 ]]; then
     stop_spinner $err_code
     log_silent "SUCCESS: $msg"
   fi
+  # Move, rename or merge any project files that need it
+  [[ -f "LICENSE" && -d ".gp" && ! -f .gp/LICENSE ]] && mv -f LICENSE .gp/LICENSE
+  [[ -f "README.md" && -d ".gp" && ! -f .gp/README.md ]] && mv -f README.md .gp/README.md
+  [[ -f "CHANGELOG.md" && -d ".gp" && ! -f .gp/CHANGELOG.md ]] && mv -f CHANGELOG.md .gp/CHANGELOG.md
+
+  # Remove potentially cached phpmyadmin installation if phpmyadmin should not be installed
+  if [ "$(bash .gp/bash/utils.sh parse_ini_value starter.ini phpmyadmin install)" == 0 ]; then
+    [ -d "public/phpmyadmin" ] && rm -rf public/phpmyadmin
+  fi
 fi
 # END: init tasks
