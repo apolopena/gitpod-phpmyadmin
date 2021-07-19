@@ -17,8 +17,10 @@ parse="bash .gp/bash/utils.sh parse_ini_value starter.ini"
 
 init_phpmyadmin=".gp/bash/init-phpmyadmin.sh"
 
-# Install phpMyAdmin if needed
-if [[ $install_phpmyadmin == 1 ]];then
-    # shellcheck source=.gp/bash/init-phpmyadmin.sh
-    . "$init_phpmyadmin" 2>/dev/null || log_silent -e "ERROR: $(. $init_phpmyadmin 2>&1 1>/dev/null)"
+if [[ $(bash .gp/bash/helpers.sh is_inited) == 0 ]]; then
+  # Install phpMyAdmin if needed
+  if [[ $install_phpmyadmin == 1 ]];then
+      # shellcheck source=.gp/bash/init-phpmyadmin.sh
+      . "$init_phpmyadmin" 2>/dev/null || log_silent -e "ERROR: $(. $init_phpmyadmin 2>&1 1>/dev/null)"
+  fi
 fi
