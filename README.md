@@ -6,7 +6,7 @@
 * Preconfigured yet fully customizable [LAMP](https://en.wikipedia.org/wiki/LAMP_(software_bundle)) or [LEMP](https://lemp.io/) stack
 * Full debugging capabilities
 
-This readme is a work in progress and an adaptation from [`gitpod-laravel-starter` v1.3.0](https://github.com/apolopena/gitpod-laravel-starter)  so ignore references to the laravel framework as this functionality has been removed. Some of the information found that perrtains to laravel will pertain to this project as well.
+This readme is a work in progress and an adaptation from [`gitpod-laravel-starter` v1.3.0](https://github.com/apolopena/gitpod-laravel-starter) so please ignore references to the laravel framework for now as that functionality has been removed. Some of the information found that pertains to laravel will pertain to this project as well.
 
 If you want to jump right in to [setting up a project](https://github.com/apolopena/gitpod-laravel-starter/wiki/Setup) then have a look at the wiki [setup page](https://github.com/apolopena/gitpod-laravel-starter/wiki/Setup).
 
